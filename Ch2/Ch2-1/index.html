@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Chapter2-1 - HTML5 Canvas</title>
+	</head>
+	<body>
+		<canvas id="GLCanvas" width="640" height="480">
+			No canvas support in this browser
+		</canvas>
+
+		<script type="text/javascript">
+			"use strict";
+			let canvas=document.getElementById("GLCanvas");
+			let gl=canvas.getContext("webgl2");
+
+			if (gl !== null) {
+				gl.clearColor(0.0, 0.8, 0.0, 1.0);
+				gl.clear(gl.COLOR_BUFFER_BIT)
+			}
+
+			document.write("<br><b>WebGL draw area above!");
+				
+		</script>
+	</body>
+</html>
